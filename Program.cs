@@ -1,4 +1,7 @@
-﻿namespace Exceptions_Hurst_Cooper
+﻿using System.Runtime.CompilerServices;
+using static System.Net.Mime.MediaTypeNames;
+
+namespace Exceptions_Hurst_Cooper
 {
     internal class Program
     {
@@ -29,6 +32,8 @@
                 {
                     Console.WriteLine(e2.Message);
                     Console.WriteLine("You really should have listened the first time.");
+                    Environment.Exit(0);
+
                 }
             }
             finally
@@ -43,7 +48,7 @@
             catch
             {
                 Console.WriteLine($"You Are {myInt}, That Means You Are Not Old Enough! GET OUT!!!");
-
+                
             }
         }
 
